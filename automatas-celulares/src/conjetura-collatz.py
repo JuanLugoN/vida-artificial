@@ -51,8 +51,10 @@ if __name__ == "__main__":
     while n <= 0:
         n = input('Ingrese un número: ')
         n = n = int(n) if n.isdigit() else 0
-    print(collatz(n))
-    coordenadas, WIDTH, HEIGHT = obtener_valores_dibujo(collatz(n))
+    collatz_n = collatz(n)
+    for x in collatz_n:
+        print(x)
+    coordenadas, WIDTH, HEIGHT = obtener_valores_dibujo(collatz_n)
     img = Image.new( 'RGB', (WIDTH,HEIGHT), WHITE)
     draw = ImageDraw.Draw(img)
     for xy, z in coordenadas:
