@@ -10,7 +10,7 @@ Implementación de los siguientes sistemas de Lindenmayer:
 ### Requisitos
 ```
 $ pip3 install Pillow
-$ sudo apt install python3-tk (Si ocupa alguna distribución basada en devian)
+$ sudo apt install python3-tk (Si ocupa alguna distribución basada en debian)
 ```
 
 ### Ejecución
