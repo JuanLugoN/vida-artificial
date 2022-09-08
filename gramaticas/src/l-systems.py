@@ -104,7 +104,7 @@ def draw_binary_tree(instructions, angle, distance):
     turt = turtle.Turtle()
     turt.left(90)
     turt.speed(0)
-    turt.color('green')
+    turt.color('blue')
     turt.shape("turtle")
     turt.up()
     turt.back(300)
@@ -144,7 +144,7 @@ def draw_koch_curve(instructions, angle, distance):
     turtle.TurtleScreen._RUNNING=True
     turt = turtle.Turtle()
     turt.speed(0)
-    turt.color('green')
+    turt.color('blue')
     turt.shape("turtle")
     turt.up()
     turt.left(90)
@@ -177,7 +177,7 @@ def draw_sierpinski_triangle(instructions, angle, distance):
     turtle.TurtleScreen._RUNNING=True
     turt = turtle.Turtle()
     turt.speed(0)
-    turt.color('green')
+    turt.color('blue')
     turt.shape("turtle")
     turt.up()
     turt.back(150)
@@ -212,7 +212,7 @@ def draw_dragon_curve(instructions, angle, distance):
     turtle.TurtleScreen._RUNNING=True
     turt = turtle.Turtle()
     turt.speed(0)
-    turt.color('green')
+    turt.color('blue')
     turt.shape("turtle")
     turt.up()
     turt.left(90)
@@ -247,7 +247,7 @@ def draw_fractal_plant(instructions, angle, distance):
     turtle.TurtleScreen._RUNNING=True
     turt = turtle.Turtle()
     turt.speed(0)
-    turt.color('green')
+    turt.color('blue')
     turt.shape("turtle")
     turt.up()
     turt.back(250)
