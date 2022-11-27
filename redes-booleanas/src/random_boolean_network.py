@@ -7,7 +7,7 @@ class Rules(dict):
         super().__init__(self)
         combinations = product(['0','1'], repeat=dimentions)
         for x in combinations:
-            self[''.join(x)] = str(random.randint(0,1))
+            self[''.join(x)] = random.randint(0,1)
 
 class RBN:
     def __init__(self, n: int = 20, m: int = 3, seed: int = None):
@@ -30,16 +30,19 @@ class RBN:
     class Node:
         def __init__(self, id: int = None, initial_state: bin = None):
             self.id = id
-            self.state = str(initial_state) or str(random.randint(0,1))
+            self.state = initial_state or random.randint(0,1)
             self.neighbours = []
+            self.mutation_rate = random.random()
         
         def connect(self, neighbours):
             for x in neighbours:
                 self.neighbours.append(x)
-
+        
         @property
         def current_state(self):
-            return ''.join([n.state for n in self.neighbours])
+            if (random.random() <= self.mutation_rate):
+                return ''.join([str((n.state + 1) % 2) for n in self.neighbours])
+            return ''.join([str(n.state) for n in self.neighbours])
         
         def __str__(self):
             return self.state

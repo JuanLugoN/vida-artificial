@@ -34,7 +34,7 @@ def main():
     enumerated_nodes = enumerate(nodes)
     for i in range(N):
         for j, node in enumerate(nodes):
-            if node.state == "1":
+            if node.state == 1:
                 rect = (
                     i * SIZE,         # x1
                     j * SIZE,         # y1
@@ -45,6 +45,7 @@ def main():
         rbn.iterate()
     img.save(PATH_IMG+'rbn.png')
     img.save(PATH_IMG+'rbn.eps')
+    img.show()
     
 if __name__ == "__main__":
     main()
